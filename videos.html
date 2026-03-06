@@ -1,51 +1,273 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Videos — David Murray Archive</title>
+  <title>Videos — Muzz America Tour</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .month-section { width: 100%; margin-bottom: 4rem; }
+    .month-heading {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      text-align: center;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--ink-light);
+      margin-bottom: 2.5rem;
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.4rem;
+      width: 100%;
+    }
+    @media (max-width: 520px) {
+      .video-grid { grid-template-columns: 1fr; }
+    }
+    .video-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+    }
+    .video-card-frame {
+      position: relative;
+      width: 100%;
+      padding: 6px;
+      border: 1.5px solid var(--ink);
+    }
+    .video-card-frame::after {
+      content: '';
+      position: absolute;
+      inset: 2px;
+      border: 1px solid var(--ink);
+      pointer-events: none;
+    }
+    .video-card-inner {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background-color: #1a1410;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      transition: background 0.2s;
+    }
+    .video-card:hover .video-card-inner {
+      background-color: #2e2218;
+    }
+    .play-icon {
+      width: 36px;
+      height: 36px;
+      border: 1.5px solid #7a6e62;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .play-icon svg {
+      width: 14px;
+      height: 14px;
+      fill: #7a6e62;
+      margin-left: 2px;
+    }
+    .watch-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #7a6e62;
+    }
+    .video-card-title {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      text-align: center;
+    }
+    .video-card-date {
+      font-size: 0.75rem;
+      font-style: italic;
+      color: var(--ink-light);
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
+
   <header class="site-header">
     <div class="header-name">David Murray</div>
     <div class="header-dates">March 22, 1960 &ndash; July 21, 2024</div>
   </header>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="videos.html" class="active">Videos</a>
     <a href="photos.html">Photos</a>
     <a href="stories.html">Stories</a>
   </nav>
+
   <div class="page-wrap">
     <main>
-      <div class="page-title">Videos</div>
-      <div class="page-subtitle">Recordings and moments captured on film.</div>
-      <div class="note">
-        To add a local video: place your .mp4 file in the videos/ folder, find a block below, uncomment the video tag, and update the src.<br /><br />
-        To add a YouTube video: find a block below, uncomment the iframe tag, and paste your embed URL.
-      </div>
-      <div class="video-list">
-        <div class="video-entry">
-          <div class="video-frame">
-            <div class="video-placeholder-box">video placeholder — place .mp4 in videos/ folder</div>
-          </div>
-          <div class="video-title">Video Title</div>
-          <div class="video-desc">Description or date</div>
-        </div>
-        <div class="video-entry">
-          <div class="video-frame">
-            <div class="video-placeholder-box">YouTube embed placeholder — paste your embed URL</div>
-          </div>
-          <div class="video-title">Video Title</div>
-          <div class="video-desc">Description or date</div>
-        </div>
-      </div>
-    </main>
+
+```
+  <div class="page-title">Muzz America Tour</div>
+  <div class="page-subtitle">112 video diaries from the road &mdash; May through July 2024.<br />Click any video to watch.</div>
+
+  <!-- MAY -->
+  <div class="month-section">
+    <div class="month-heading">May</div>
+    <div class="video-grid">
+
+      <a class="video-card" href="https://player.mux.com/ywT4ZRAdFiugS4Je9Qy9NbiNlJv2qgEM8YHSh02ZSl6c" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #1</div><div class="video-card-date">May 2</div></a>
+      <a class="video-card" href="https://player.mux.com/y5WYxwcxfcKeZtOjp00QSCZOGuVqrtMom7yikZlf7sFA" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #2</div><div class="video-card-date">May 3</div></a>
+      <a class="video-card" href="https://player.mux.com/7ulGY5E5wPhJlWXQJbUxAM702PJXAi78mkbYPBE6I5tY" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #3</div><div class="video-card-date">May 4</div></a>
+      <a class="video-card" href="https://player.mux.com/L4ynJVpihpNMBVpNx01EDtXZ201yR9syApJojrnj01wR6o" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #4</div><div class="video-card-date">May 17</div></a>
+      <a class="video-card" href="https://player.mux.com/702C3LmELm5k00YVKo8V2201b02uf78Ft5zpYiPuiHN3aTA" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #5</div><div class="video-card-date">May 18</div></a>
+      <a class="video-card" href="https://player.mux.com/iYNXIveWOTBx6kYf02T02ncPygHD8m7E4MuYFHrklOaLg" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #6</div><div class="video-card-date">May 19</div></a>
+      <a class="video-card" href="https://player.mux.com/D44W7yQOOu3FrbTRUXug9013rXMpi4xU00ET502ikLrU7o" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #7</div><div class="video-card-date">May 19</div></a>
+      <a class="video-card" href="https://player.mux.com/KPwDQ702gPxATN00KbRrxBAR8M01H024VL6pXMYXiDgMDIc" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #8</div><div class="video-card-date">May 20</div></a>
+      <a class="video-card" href="https://player.mux.com/J83cu6ix7CFGpl024PoQnLViunqnie3DIWz01dS2CV2uI" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #9</div><div class="video-card-date">May 22</div></a>
+      <a class="video-card" href="https://player.mux.com/YSwb2rirg23M3d289Iv01Ll2bgFN8SycM00fFR2VWbj8I" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #10</div><div class="video-card-date">May 22</div></a>
+      <a class="video-card" href="https://player.mux.com/01vPBODXCo00zD5mGHYmnc00Cx8qnpSkf501KvFqVhGtPRU" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #11</div><div class="video-card-date">May 23</div></a>
+      <a class="video-card" href="https://player.mux.com/501z4FOMiGOkEM3vzk5Lwh3Fu01mCtbJAGjn513s4Fy28" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #12</div><div class="video-card-date">May 24</div></a>
+      <a class="video-card" href="https://player.mux.com/01K00ZXDSuU8kGk1YripQvpdPpQxwusQ2Y8muHOfP23Ns" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #13</div><div class="video-card-date">May 24</div></a>
+      <a class="video-card" href="https://player.mux.com/4PMF9sBWG001CoR02ugTjKICzHg8PJgDHdl3aJLUgtGF8" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #14</div><div class="video-card-date">May 24</div></a>
+      <a class="video-card" href="https://player.mux.com/JGi7TzusfRxMkc7E1H9pB3Apq00GeZ7frgO2hu4iR00ec" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #15</div><div class="video-card-date">May 25</div></a>
+      <a class="video-card" href="https://player.mux.com/tyTPk5vAMNb7s2wBpF3kpiuHzPWtD1pJoZl8zxN01pXc" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #16</div><div class="video-card-date">May 25</div></a>
+      <a class="video-card" href="https://player.mux.com/g26e1qZ733BchyoUcXTPSMDvBlEbfuDcQ2bx6xe001FU" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #17</div><div class="video-card-date">May 26</div></a>
+      <a class="video-card" href="https://player.mux.com/028OLrjNRh4XpjTZLtRWM9FKL2VMY00IdsrMbl3KmfbxQ" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #18</div><div class="video-card-date">May 26</div></a>
+      <a class="video-card" href="https://player.mux.com/fR02DV4WX01QupYhIvb55028MCNQqkASRs302UeSXlcQs4I" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #19</div><div class="video-card-date">May 26</div></a>
+      <a class="video-card" href="https://player.mux.com/HDHBuuHyMOQt9QL8LwDZNQz9KB02T8fed4Zb01kY00bGVk" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #20</div><div class="video-card-date">May 26</div></a>
+      <a class="video-card" href="https://player.mux.com/rZdEJlHnSr3VgKqOj6Z00jXzj57LJQ201cb801Ld7n601Jg" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #21</div><div class="video-card-date">May 28</div></a>
+      <a class="video-card" href="https://player.mux.com/BQrplj4czWZGQ4i00ufRBu9u5dwX02JMOUUbiMxVeFs02E" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #22</div><div class="video-card-date">May 28</div></a>
+      <a class="video-card" href="https://player.mux.com/ePrqD3td02yDBpbtGwTE1rq013DY9nQAOOiln5h01PC02wY" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #23</div><div class="video-card-date">May 29</div></a>
+      <a class="video-card" href="https://player.mux.com/7ylIx6m83DUjxb3zB01TzL01Y301ZpKQKdCNhV7xq6XvRs" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #24</div><div class="video-card-date">May 30</div></a>
+      <a class="video-card" href="https://player.mux.com/9014Ts6Pos8IUl2URN5Ie7KR1DcAOqXM3f2emfKUI1IQ" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #25</div><div class="video-card-date">May 30</div></a>
+      <a class="video-card" href="https://player.mux.com/jZGagiHqP5kkDu7BJijD5YMWkIu4hlbR5gGLx9IfS01c" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #26</div><div class="video-card-date">May 30</div></a>
+      <a class="video-card" href="https://player.mux.com/RGRXomc5UpT01mFZhqVb4GQU02WkmdVDuuHLJICQEUw6g" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #27</div><div class="video-card-date">May 30</div></a>
+
+    </div>
   </div>
+
+  <!-- JUNE -->
+  <div class="month-section">
+    <div class="month-heading">June</div>
+    <div class="video-grid">
+
+      <a class="video-card" href="https://player.mux.com/OupcQAUQTPMJHSBZU14u2I8YHpEGagUuCPChniTOwDQ" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #28</div><div class="video-card-date">June 1</div></a>
+      <a class="video-card" href="https://player.mux.com/Tdq201yz4XYftdvv54wHNCypfndUy02mod2LmNCxjhk1U" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #29</div><div class="video-card-date">June 1</div></a>
+      <a class="video-card" href="https://player.mux.com/yiLyjIGiK026wQ2nS8MFL3aJP5CzesbanmEwJgBqePKA" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #30</div><div class="video-card-date">June 2</div></a>
+      <a class="video-card" href="https://player.mux.com/qIskTTCLG4ktcWBMg01600yqdojzh8p00qiSzxn0002EK8IU" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #31</div><div class="video-card-date">June 2</div></a>
+      <a class="video-card" href="https://player.mux.com/V9LxCNqEDWUJAogvnoTS3UpT7iG00QhOWQpO4ljgiQeE" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #32</div><div class="video-card-date">June 3</div></a>
+      <a class="video-card" href="https://player.mux.com/ZuE2Nvd00HcquKQPVLzhHNjeEtcc3AoMnHgt01Mbd2yfY" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #33</div><div class="video-card-date">June 3</div></a>
+      <a class="video-card" href="https://player.mux.com/ZaoSEGso3b5Kl025o1o003Des3av7Gggl02w7EopjXP3h4" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #34</div><div class="video-card-date">June 3</div></a>
+      <a class="video-card" href="https://player.mux.com/xvNkN85mI9RQ8INlXU01ddVXgUmketeLos4NPa5aKnq8" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #35</div><div class="video-card-date">June 4</div></a>
+      <a class="video-card" href="https://player.mux.com/hZJez6aNphqpHs01WcNP01e400z00A4uwcZ02LyD016013kdhg" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #36</div><div class="video-card-date">June 4</div></a>
+      <a class="video-card" href="https://player.mux.com/AbAcR6LB6Jyf7E01HhPKrH5KT2W00TdO9jdJqDobN92xY" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #37</div><div class="video-card-date">June 5</div></a>
+      <a class="video-card" href="https://player.mux.com/HRlfELT9tfQPXI6ZmhxdfHpitxh8YZgO6g3yC3hXex4" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #38</div><div class="video-card-date">June 5</div></a>
+      <a class="video-card" href="https://player.mux.com/ZJq8P3jN4GN02RXP1Z9PFfPoq5do00tVXlgXbF6g5F6gs" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #39</div><div class="video-card-date">June 7</div></a>
+      <a class="video-card" href="https://player.mux.com/yRH900NYWKaG017200ltsJ2GPTKsorUEufCUbVriR2H9m00" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #40</div><div class="video-card-date">June 7</div></a>
+      <a class="video-card" href="https://player.mux.com/j72iWkqNkzaRaP2U165EXwal6e6eDGQ7lJma1o39PsQ" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #41</div><div class="video-card-date">June 8</div></a>
+      <a class="video-card" href="https://player.mux.com/01lBj011aSfsIOoy00b2hq01vHLJdi802WmHPetSF017pCgpg" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #42</div><div class="video-card-date">June 8</div></a>
+      <a class="video-card" href="https://player.mux.com/kmxQa00FSoPIvdkpMALcwVcpnBznnpX9MGqcpT17m6ZI" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #43</div><div class="video-card-date">June 8</div></a>
+      <a class="video-card" href="https://player.mux.com/cmKMPv1x01QABDxQkg0133zo2KN00i3VDBR37m7oglFRgE" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #44</div><div class="video-card-date">June 9</div></a>
+      <a class="video-card" href="https://player.mux.com/GsRGF8PSoSTegDOp02VCtTvtY5MsGnBsShos7s1rLui00" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #45</div><div class="video-card-date">June 9</div></a>
+      <a class="video-card" href="https://player.mux.com/jY4lNUWgoxxpxTnn9xryZXlLO3fF00H6RzyMnEfe7AZQ" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #46</div><div class="video-card-date">June 10</div></a>
+      <a class="video-card" href="https://player.mux.com/zPO1u4ABsANGBhTVRufAxRoaWrzfdnC420128YS9VATU" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #47</div><div class="video-card-date">June 11</div></a>
+      <a class="video-card" href="https://player.mux.com/e025UKWrn4X6HtwaEitqAFxggb8ELmZG1vNZJRrvLDkU" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #48</div><div class="video-card-date">June 11</div></a>
+      <a class="video-card" href="https://player.mux.com/RIf3xcQWUR8sFuUoCwaaxSDfLq02vuU014CTR1g8RbA1E" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #49</div><div class="video-card-date">June 11</div></a>
+      <a class="video-card" href="https://player.mux.com/vbTCVFf02fH012I6TT9uQm44Ua4Iu2ncIF00w5v3kpex02Q" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #50</div><div class="video-card-date">June 12</div></a>
+      <a class="video-card" href="https://player.mux.com/02e1DWXkhjgVMk87by6pXGqJkhAaI9IhdWG01vutFJT4M" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #51</div><div class="video-card-date">June 12</div></a>
+      <a class="video-card" href="https://player.mux.com/n00MAQh1cEf82mnkC2ETW8jqqFcfuGCT1Iz018rcLVUKU" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #52</div><div class="video-card-date">June 12</div></a>
+      <a class="video-card" href="https://player.mux.com/bZmO3XueeuU6kUVFfrfoOHu4pxAHmfGcUYYP01F3lATI" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #53</div><div class="video-card-date">June 13</div></a>
+      <a class="video-card" href="https://player.mux.com/BiJV8Ms4gN8AZpKZ5TpIgNxIHRUC02m00nx4WYKTyDdDk" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #54</div><div class="video-card-date">June 14</div></a>
+      <a class="video-card" href="https://player.mux.com/QUVCMFLv8BZe5RCmU00Z53VdReeHCZCCKOYHPc2AwUZY" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #55</div><div class="video-card-date">June 14</div></a>
+      <a class="video-card" href="https://player.mux.com/XQTSezo3mpo100ozEtoPcRASI8ZvTE8wfq9zamef98hs" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #56</div><div class="video-card-date">June 14</div></a>
+      <a class="video-card" href="https://player.mux.com/kqfpJuubZgG201SHC6SrxJP02nc7Y4vx5syJc2bo01uTPw" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #57</div><div class="video-card-date">June 14</div></a>
+      <a class="video-card" href="https://player.mux.com/slgHL2pQ01k02hounLN8dHIx300oLxAftMgMXDKmK7zoIk" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #58</div><div class="video-card-date">June 14</div></a>
+      <a class="video-card" href="https://player.mux.com/qW4u2WZoVyplY2KSxdhVPsvxK79O00RduehhRq019QINg" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #59</div><div class="video-card-date">June 14</div></a>
+      <a class="video-card" href="https://player.mux.com/01ZLMNZIZ9W01BqThurAAflcAOL7Pd5TQpCpfVW6EKyKY" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #60</div><div class="video-card-date">June 14</div></a>
+      <a class="video-card" href="https://player.mux.com/WQw9Fa8nfB7kIM7DphwF6iG6gNHdjkc1gV7WnWEgzA4" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #61</div><div class="video-card-date">June 15</div></a>
+      <a class="video-card" href="https://player.mux.com/r4zl006ddh4xTwZ00GQq4YsjVD8GkbG3D402koycP4IpFo" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #62</div><div class="video-card-date">June 16</div></a>
+      <a class="video-card" href="https://player.mux.com/G87zVfc84p12tKLNNDPU93f9gspMJA016BD4kbLFvgME" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #63</div><div class="video-card-date">June 16</div></a>
+      <a class="video-card" href="https://player.mux.com/bvax8cBVIoAAIKY3R01EIzavI3UvAN4oRNK01UnKw01Dmk" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #64</div><div class="video-card-date">June 16</div></a>
+      <a class="video-card" href="https://player.mux.com/FfChg2KIW7AmFm1ONRuLvR5xM3YRI2CCCGA01xct8pV4" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #65</div><div class="video-card-date">June 17</div></a>
+      <a class="video-card" href="https://player.mux.com/OFXm7M73H012026euV64yzkwQGk4SjuOQES4Lx02oXjX02A" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #66</div><div class="video-card-date">June 17</div></a>
+      <a class="video-card" href="https://player.mux.com/G7wRGEqNlH9r4Z02G01hZBTOe0250213K5HlVZ02sZccCTTw" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #67</div><div class="video-card-date">June 18</div></a>
+      <a class="video-card" href="https://player.mux.com/osFU3deL5IhC800Pt0201k9AWMNOqjYouLhI00dLvOU5re8" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #68</div><div class="video-card-date">June 18</div></a>
+      <a class="video-card" href="https://player.mux.com/g3H1xYQsNf1I6l6BAQKyPP2Am68Bir00002ygJB9IGpFc" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #69</div><div class="video-card-date">June 19</div></a>
+      <a class="video-card" href="https://player.mux.com/1zHGIVBmrm02nxleUBuYmYM3g00EpRoUUAnqOZz8rinrU" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #70</div><div class="video-card-date">June 19</div></a>
+      <a class="video-card" href="https://player.mux.com/7m251WBiK84qGndFgHAB78QM4b6EsUS01uTGDSa5jo1Q" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #71</div><div class="video-card-date">June 19</div></a>
+      <a class="video-card" href="https://player.mux.com/VBuGGQpbEQ9cRi6vpSTGzVZede02GCiAJGUO48mDkgO4" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #72</div><div class="video-card-date">June 20</div></a>
+      <a class="video-card" href="https://player.mux.com/BqyXE5AU00umhkR5F7XdtyfDOIi5VKztc6rAvz01PFO3k" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #73</div><div class="video-card-date">June 20</div></a>
+      <a class="video-card" href="https://player.mux.com/OMPIIVMIo1x02IEkvry01JyjbYM3wjFNT4fshUwd3P1Ko" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #74</div><div class="video-card-date">June 21</div></a>
+      <a class="video-card" href="https://player.mux.com/KtXVr8xx02v189Asmm01yu67BuNX7102UdICPbLEFb8O004" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #75</div><div class="video-card-date">June 22</div></a>
+      <a class="video-card" href="https://player.mux.com/yk5qY1K2PYpL2o02sEEmyfZwj2Q4YlDWnDDuN5Xx7XZY" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #76</div><div class="video-card-date">June 23</div></a>
+      <a class="video-card" href="https://player.mux.com/ze4OnsFYmPI5ch8p8i1xn6nz100xZfpU6qGZVGR32d7Q" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #77</div><div class="video-card-date">June 23</div></a>
+      <a class="video-card" href="https://player.mux.com/dBPB02NMxgEqbeI4PX5JrkEsh7nVoQpTdZS5VovL31l8" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #78</div><div class="video-card-date">June 24</div></a>
+      <a class="video-card" href="https://player.mux.com/fBhxgBh01YYb9MXC6QHDOYfrN90100b15lkwIsDGMKGoDs" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #79</div><div class="video-card-date">June 25</div></a>
+      <a class="video-card" href="https://player.mux.com/BWTf1s3JESrtjbHbJfk2J01AVUQ9bJXR600iB8Is8tCxw" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #80</div><div class="video-card-date">June 26</div></a>
+      <a class="video-card" href="https://player.mux.com/Tw01seBZClUMe7OCxcXffGcpVqvMsOsqYu00JDR02SY6mY" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #81</div><div class="video-card-date">June 26</div></a>
+      <a class="video-card" href="https://player.mux.com/TZtgqHc5PsIoCF9mIZIeZvkVlfT5YO1ER2szUf01Z2qs" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #82</div><div class="video-card-date">June 28</div></a>
+      <a class="video-card" href="https://player.mux.com/M00QimtBPgFFw3jtuwOMrJUEl00ycyg3cIoXA1AAgLqoo" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #83</div><div class="video-card-date">June 28</div></a>
+      <a class="video-card" href="https://player.mux.com/7YdNWEjTj02ldigk6yB17rE1YB8ZbqqaHiVCmd01zIfLU" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #84</div><div class="video-card-date">June 28</div></a>
+      <a class="video-card" href="https://player.mux.com/wfatRvyvnv4EP7Q3A01unKi938bQP5LStQplMnnlFFws" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #85</div><div class="video-card-date">June 28</div></a>
+      <a class="video-card" href="https://player.mux.com/keYZy00E7zHoexPo93X8gGCyb7pFFy2DTgjuGdWQTugQ" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #86</div><div class="video-card-date">June 29</div></a>
+      <a class="video-card" href="https://player.mux.com/upj9006pV4NM9A004D00n5uEOEX2naQqQm00iMk8nm4my4U" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #87</div><div class="video-card-date">June 29</div></a>
+      <a class="video-card" href="https://player.mux.com/uUR9beI9702VpqQ7IITPjPorg9ldIppomLW02eWg02hN004" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #88</div><div class="video-card-date">June 29</div></a>
+      <a class="video-card" href="https://player.mux.com/nVDlHzvblIwUtzCcz4i00DSY00cUvfMfrJVIPFQrGzrxU" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #89</div><div class="video-card-date">June 30</div></a>
+
+    </div>
+  </div>
+
+  <!-- JULY -->
+  <div class="month-section">
+    <div class="month-heading">July</div>
+    <div class="video-grid">
+
+      <a class="video-card" href="https://player.mux.com/TttxNYu02ecdRy00r41Z5wQOiV9hkJm8Y1lIIIoDoJ25o" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #90</div><div class="video-card-date">July 1</div></a>
+      <a class="video-card" href="https://player.mux.com/s1W02qOs009W4nX01FX2rGk02DTh402ZV8WLg100ki023NiPtg" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #91</div><div class="video-card-date">July 2</div></a>
+      <a class="video-card" href="https://player.mux.com/EXg5MnLz2bGYDcJ01j4dFa88WeAV4fXhHxpIhu8zfu5g" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #92</div><div class="video-card-date">July 2</div></a>
+      <a class="video-card" href="https://player.mux.com/sAKrA69FgapgNfOWWCKTVKw43bw5g02hX6vMs7AR8DnQ" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #93</div><div class="video-card-date">July 3</div></a>
+      <a class="video-card" href="https://player.mux.com/ccQ3MIgQkPIJyRBOXH3imrS7SFOlHKpGnr5rIzE02qsA" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #94</div><div class="video-card-date">July 5</div></a>
+      <a class="video-card" href="https://player.mux.com/gaR9023ZUbCsljxgLDkC202aFhD024AVOmdG4ftY4hL2r00" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #95</div><div class="video-card-date">July 5</div></a>
+      <a class="video-card" href="https://player.mux.com/z01mxsg3vWHKFBb002wLDHVXcGALN17o1nG016ax01PuAIY" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #96</div><div class="video-card-date">July 5</div></a>
+      <a class="video-card" href="https://player.mux.com/kVmCktnvGITEKKxI3hptWFdcyCjC1uaJO7kH1Y3qoBw" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #97</div><div class="video-card-date">July 6</div></a>
+      <a class="video-card" href="https://player.mux.com/avKRo61YSRv7JUEqJsK5axTe2tUmcs3Id4GQKwbXJRs" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #98</div><div class="video-card-date">July 8</div></a>
+      <a class="video-card" href="https://player.mux.com/jdI7JkudeRbgaNIfRPqf02YWvY00YQ18IX3izHNUVJtLg" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #99</div><div class="video-card-date">July 8</div></a>
+      <a class="video-card" href="https://player.mux.com/MQjFlUvdBKQLSZelF6W8RYIzVRUR1OBn2Z1YAU00tocQ" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #100</div><div class="video-card-date">July 8</div></a>
+      <a class="video-card" href="https://player.mux.com/rfiTX401qvaIztvotoWF0031n5JNG00Kt01xqCj6KyQQTpA" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #101</div><div class="video-card-date">July 9</div></a>
+      <a class="video-card" href="https://player.mux.com/yJm66mYYSpDduCjraYYgtem3WptcGgxoPEebh7VJ8pM" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #102</div><div class="video-card-date">July 9</div></a>
+      <a class="video-card" href="https://player.mux.com/DPVniTYwf7z01gmyOuodwwBtTvFWDzYQvFZdhxCSM02gk" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #103</div><div class="video-card-date">July 9</div></a>
+      <a class="video-card" href="https://player.mux.com/p5yuUE5UgqC32TIjcHNn02KHQCXc01fuob6RLx2TO009cU" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #104</div><div class="video-card-date">July 9</div></a>
+      <a class="video-card" href="https://player.mux.com/3vfHbokNhl4wDSnXFvS1jSyjWXjUz7lYhlgUX46wDcw" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #105</div><div class="video-card-date">July 10</div></a>
+      <a class="video-card" href="https://player.mux.com/Mo1yBuXwszhKLyoO02amvQdg6kb01ZMh012VZgJaUdFYdU" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #106</div><div class="video-card-date">July 10</div></a>
+      <a class="video-card" href="https://player.mux.com/m3ySajg14NH4YT18MXxOV1j1IlehKb7YD5uSyvAD9200" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #107</div><div class="video-card-date">July 10</div></a>
+      <a class="video-card" href="https://player.mux.com/TjV4vY71MW012z61kNXpqIEY3Jhm4Y2qVkMS01vsedbOE" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #108</div><div class="video-card-date">July 10</div></a>
+      <a class="video-card" href="https://player.mux.com/aQl7MB8z6s4Bdisp5Vy1izEp00LkGZ3sXwbOVvK013KD8" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #109</div><div class="video-card-date">July 10</div></a>
+      <a class="video-card" href="https://player.mux.com/DamUCn2QkD02RwvBuRNuweeF3Cn6yPAXa8eQWqlgW6p8" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #110</div><div class="video-card-date">July 10</div></a>
+      <a class="video-card" href="https://player.mux.com/eGFF2Iii4mXeYmPJLyCfYlSVeYxMuZ01OoVqrcdW9w01w" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #111</div><div class="video-card-date">July 10</div></a>
+      <a class="video-card" href="https://player.mux.com/Q8pqYRnKmTTQVp4SnjqS5Tojh24kEa02v8Hk02XnIXOvc" target="_blank"><div class="video-card-frame"><div class="video-card-inner"><div class="play-icon"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div><div class="watch-label">Watch</div></div></div><div class="video-card-title">Muzz America #112</div><div class="video-card-date">July 10</div></a>
+
+    </div>
+  </div>
+
+</main>
+```
+
+  </div>
+
   <footer>
     <img src="clover.svg" alt="" class="clover-icon" />
-    <div class="footer-text">Rest Easy, Muzz.</div>
+    <div class="footer-text"><em>Ride on, Muzz. 🍀</em></div>
   </footer>
+
 </body>
 </html>
